@@ -1,0 +1,186 @@
+/* Estilo General */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    background-color: #1e1e1e;
+    color: #f4f4f9;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+/* Estilos del Header */
+header {
+    background: linear-gradient(135deg, #1c1c1c, #2e2e2e);
+    color: #00d8ff;
+    padding: 3rem 0;
+    text-align: center;
+    border-bottom: 1px solid #333;
+}
+
+h1 {
+    font-size: 3rem;
+    margin-bottom: 0.5rem;
+    letter-spacing: 2px;
+}
+
+.profession {
+    font-size: 1.3rem;
+    margin-bottom: 1.5rem;
+    color: #9acdff;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+
+nav a {
+    color: #00d8ff;
+    text-decoration: none;
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: #9acdff;
+}
+
+/* Sección General */
+section {
+    padding: 4rem 0;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+h2 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    text-align: center;
+    color: #00d8ff;
+    position: relative;
+}
+
+h2::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 3px;
+    background-color: #00d8ff;
+    margin: 1rem auto 0;
+    border-radius: 5px;
+}
+
+/* Sección About */
+#about p {
+    text-align: center;
+    font-size: 1.1rem;
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.8;
+    color: #ddd;
+}
+
+/* Sección Skills */
+#skills ul {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+#skills li {
+    background-color: #2e2e2e;
+    color: #00d8ff;
+    padding: 0.8rem 1.2rem;
+    border-radius: 8px;
+    font-size: 1rem;
+    border: 1px solid #00d8ff;
+    transition: background-color 0.3s ease;
+}
+
+#skills li:hover {
+    background-color: #00d8ff;
+    color: #1e1e1e;
+}
+
+/* Sección Proyectos */
+.projects-grid {
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.project {
+    background-color: #2b2b2b;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid #333;
+}
+
+.project:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
+}
+
+.project h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    color: #00d8ff;
+}
+
+.project p {
+    color: #ddd;
+}
+
+/* Sección Contacto */
+#contact {
+    text-align: center;
+}
+
+.contact-button {
+    background-color: #00d8ff;
+    color: #1e1e1e;
+    padding: 1rem 2.5rem;
+    border-radius: 50px;
+    text-decoration: none;
+    font-size: 1rem;
+    letter-spacing: 1px;
+    margin-top: 2rem;
+    display: inline-block;
+    transition: background-color 0.3s ease;
+}
+
+.contact-button:hover {
+    background-color: #9acdff;
+}
+
+/* Footer */
+footer {
+    background-color: #121212;
+    color: #999;
+    text-align: center;
+    padding: 2rem 0;
+    margin-top: 4rem;
+    border-top: 1px solid #333;
+}
+
+footer p {
+    margin-bottom: 0;
+    font-size: 0.9rem;
+}
