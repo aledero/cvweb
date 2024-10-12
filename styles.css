@@ -1,186 +1,316 @@
 /* Estilo General */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
 }
 
 body {
-    background-color: #1e1e1e;
-    color: #f4f4f9;
-    font-size: 16px;
-    line-height: 1.6;
+  background-color: #1e1e1e;
+  color: #f4f4f9;
+  font-size: 16px;
+  line-height: 1.6;
 }
 
 /* Estilos del Header */
 header {
-    background: linear-gradient(135deg, #1c1c1c, #2e2e2e);
-    color: #00d8ff;
-    padding: 3rem 0;
-    text-align: center;
-    border-bottom: 1px solid #333;
+  background: linear-gradient(135deg, #1c1c1c, #2e2e2e);
+  color: #00d8ff;
+  padding: 3rem 0;
+  text-align: center;
+  border-bottom: 1px solid #333;
 }
 
 h1 {
-    font-size: 3rem;
-    margin-bottom: 0.5rem;
-    letter-spacing: 2px;
+  font-size: 3rem;
+  margin-bottom: 0.5rem;
+  letter-spacing: 2px;
 }
 
 .profession {
-    font-size: 1.3rem;
-    margin-bottom: 1.5rem;
-    color: #9acdff;
+  font-size: 1.3rem;
+  margin-bottom: 1.5rem;
+  color: #9acdff;
+  font-style: italic;
 }
 
 nav ul {
-    list-style: none;
-    display: flex;
-    justify-content: center;
-    gap: 2rem;
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
 }
 
 nav a {
-    color: #00d8ff;
-    text-decoration: none;
-    font-size: 1rem;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    transition: color 0.3s ease;
+  color: #00d8ff;
+  text-decoration: none;
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: color 0.3s ease;
 }
 
 nav a:hover {
-    color: #9acdff;
+  color: #9acdff;
 }
 
 /* Sección General */
 section {
-    padding: 4rem 0;
+  padding: 4rem 0;
 }
 
 .container {
-    width: 90%;
-    max-width: 1200px;
-    margin: 0 auto;
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 h2 {
-    font-size: 2rem;
-    margin-bottom: 2rem;
-    text-align: center;
-    color: #00d8ff;
-    position: relative;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  text-align: center;
+  color: #00d8ff;
+  position: relative;
 }
 
 h2::after {
-    content: '';
-    display: block;
-    width: 60px;
-    height: 3px;
-    background-color: #00d8ff;
-    margin: 1rem auto 0;
-    border-radius: 5px;
+  content: "";
+  display: block;
+  width: 60px;
+  height: 3px;
+  background-color: #00d8ff;
+  margin: 1rem auto 0;
+  border-radius: 5px;
 }
 
 /* Sección About */
 #about p {
-    text-align: center;
-    font-size: 1.1rem;
-    max-width: 800px;
-    margin: 0 auto;
-    line-height: 1.8;
-    color: #ddd;
+  text-align: center;
+  font-size: 1.1rem;
+  max-width: 800px;
+  margin: 0 auto;
+  line-height: 1.8;
+  color: #ddd;
+}
+
+/* Sección Career */
+#career .container {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+#career .container .card {
+  position: relative;
+  max-width: 50rem;
+}
+
+#career .container .card h4 {
+  color: #9acdff;
+  font-style: italic;
+}
+
+#career .container .card:nth-child(odd) {
+  padding: 30px 0 30px 30px;
+}
+#career .container .card:nth-child(even) {
+  padding: 30px 30px 30px 0;
+}
+#career .container .card::before {
+  content: "";
+  position: absolute;
+  width: 50%;
+  border: solid #00d8ff;
+}
+
+#career .container .card:nth-child(odd)::before {
+  left: 0px;
+  top: -4.5px;
+  bottom: -4.5px;
+  border-width: 5px 0 5px 5px;
+  border-radius: 50px 0 0 50px;
+}
+
+@media only screen and (max-width: 400px) {
+  #career .container .card:nth-child(odd)::before {
+    top: -5px;
+    bottom: -5px;
+  }
+}
+
+#career .container .card:nth-child(even)::before {
+  right: 0;
+  top: 0;
+  bottom: 0;
+  border-width: 5px 5px 5px 0;
+  border-radius: 0 50px 50px 0;
+}
+
+#career .container .card:first-child::before {
+  border-top: 0;
+  border-top-left-radius: 0;
+}
+
+#career .container .card:last-child:nth-child(odd)::before {
+  border-bottom: 0;
+  border-bottom-left-radius: 0;
+}
+
+#career .container .card:last-child:nth-child(even)::before {
+  border-bottom: 0;
+  border-bottom-right-radius: 0;
+}
+
+#career .container .card .info {
+  display: flex;
+  flex-direction: column;
+  background-color: #2e2e2e;
+  color: #ddd;
+  border-radius: 8px;
+  border: 1px solid #00d8ff;
+  padding: 10px;
+}
+
+#career .container .card .info .title {
+  color: #00d8ff;
+  position: relative;
+}
+
+#career .container .card .info .title::before {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background: white;
+  border-radius: 999px;
+  border: 3px solid #00d8ff;
+}
+
+#career .container .card:nth-child(odd) > .info > .title::before {
+  left: -45px;
+}
+
+#career .container .card:nth-child(even) > .info > .title::before {
+  right: -45px;
 }
 
 /* Sección Skills */
-#skills ul {
-    display: flex;
-    justify-content: center;
-    gap: 1rem;
-    flex-wrap: wrap;
+#skills .container {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  flex-wrap: wrap;
 }
 
-#skills li {
-    background-color: #2e2e2e;
-    color: #00d8ff;
-    padding: 0.8rem 1.2rem;
-    border-radius: 8px;
-    font-size: 1rem;
-    border: 1px solid #00d8ff;
-    transition: background-color 0.3s ease;
+#skills .container .card {
+  flex-direction: column;
+  flex: 1;
+  text-align: center;
+  padding: 1rem;
+  border-radius: 8px;
+  border: 1px solid #00d8ff;
+  transition: background-color 0.3s ease;
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
 }
 
-#skills li:hover {
-    background-color: #00d8ff;
-    color: #1e1e1e;
+#skills .container .card h3 {
+  color: #ddd;
+  font-style: italic;
+}
+
+#skills .container .card ul {
+  list-style-type: none;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+  height: max-content;
+}
+
+#skills .container .card ul li {
+  background-color: #2e2e2e;
+  color: #00d8ff;
+  padding: 0.8rem 1.2rem;
+  border-radius: 8px;
+  font-size: 1rem;
+  border: 1px solid #00d8ff;
+  transition: background-color 0.3s ease;
+}
+
+#skills .container .card ul li:hover {
+  background-color: #00d8ff;
+  color: #1e1e1e;
 }
 
 /* Sección Proyectos */
 .projects-grid {
-    display: flex;
-    justify-content: space-between;
-    gap: 2rem;
-    flex-wrap: wrap;
+  display: flex;
+  justify-content: space-between;
+  gap: 2rem;
+  flex-wrap: wrap;
 }
 
 .project {
-    background-color: #2b2b2b;
-    padding: 2rem;
-    border-radius: 10px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    border: 1px solid #333;
+  background-color: #2b2b2b;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 1px solid #333;
 }
 
 .project:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
+  transform: translateY(-10px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
 }
 
 .project h3 {
-    font-size: 1.5rem;
-    margin-bottom: 0.5rem;
-    color: #00d8ff;
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+  color: #00d8ff;
 }
 
 .project p {
-    color: #ddd;
+  color: #ddd;
 }
 
 /* Sección Contacto */
 #contact {
-    text-align: center;
+  text-align: center;
 }
 
 .contact-button {
-    background-color: #00d8ff;
-    color: #1e1e1e;
-    padding: 1rem 2.5rem;
-    border-radius: 50px;
-    text-decoration: none;
-    font-size: 1rem;
-    letter-spacing: 1px;
-    margin-top: 2rem;
-    display: inline-block;
-    transition: background-color 0.3s ease;
+  background-color: #00d8ff;
+  color: #1e1e1e;
+  padding: 1rem 2.5rem;
+  border-radius: 50px;
+  text-decoration: none;
+  font-size: 1rem;
+  letter-spacing: 1px;
+  margin-top: 2rem;
+  display: inline-block;
+  transition: background-color 0.3s ease;
 }
 
 .contact-button:hover {
-    background-color: #9acdff;
+  background-color: #9acdff;
 }
 
 /* Footer */
 footer {
-    background-color: #121212;
-    color: #999;
-    text-align: center;
-    padding: 2rem 0;
-    margin-top: 4rem;
-    border-top: 1px solid #333;
+  background-color: #121212;
+  color: #999;
+  text-align: center;
+  padding: 2rem 0;
+  margin-top: 4rem;
+  border-top: 1px solid #333;
 }
 
 footer p {
-    margin-bottom: 0;
-    font-size: 0.9rem;
+  margin-bottom: 0;
+  font-size: 0.9rem;
 }
