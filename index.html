@@ -11,16 +11,29 @@
 </head>
 <body class="dark-theme">
     <header>
-        <div class="container">
+        <div class="sideLeft">
             <h1>Alejandro Delgado Rodríguez</h1>
             <p class="profession">Mid-Level Front-End React Developer</p>
-            <p>
-                <i class="fa-regular fa-xl fa-sun"></i>
-                <i id="themeToggleIcon" onclick="toggleTheme()" class="fa-solid fa-xl fa-toggle-on"></i>
-                <i class="fa-regular fa-xl fa-moon"></i>
-            </p>
         </div>
     </header>
+    
+    <div id="navbar">
+        <div class="content">
+            <div class="contact">
+                <span>Contact Me!</span>
+                <a href="mailto:alejandrodelgadorodriguez@outlook.com"><i class="fa-regular fa-envelope"></i><span class="contact-label"> Email</span><span class="contact-text">: alejandrodelgadorodriguez@outlook.com</span></a>
+                <a href="https://www.linkedin.com/in/alejandro-delgado-rodriguez/"><i class="fa-brands fa-linkedin"></i><span class="contact-label"> LinkedIn</span><span class="contact-text">: /in/alejandro-delgado-rodriguez/</span></a>
+            </div>
+            <div class="theme-change">
+                <span>Theme: </span>
+                <div id="theme-swicther">
+                    <i class="fa-regular fa-xl fa-sun"></i>
+                    <i id="themeToggleIcon" onclick="toggleTheme()" class="fa-solid fa-xl fa-toggle-on"></i>
+                    <i class="fa-regular fa-xl fa-moon"></i>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <section id="about">
         <div class="container">
@@ -130,15 +143,6 @@
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
-
-    <section id="contact">
-        <div class="container">
-            <h2>Contact Me</h2>
-            <p>If you'd like to get in touch, feel free to drop me a message!</p>
-            <a href="mailto:alejandrodelgadorodriguez@outlook.com" class="contact-button">Email Me</a>
-            <a href="https://www.linkedin.com/in/alejandro-delgado-rodriguez/" class="contact-button">LinkedIn</a>
         </div>
     </section>
 

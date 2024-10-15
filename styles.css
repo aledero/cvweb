@@ -1,5 +1,4 @@
 /* Estilo General */
-
 * {
   margin: 0;
   padding: 0;
@@ -41,13 +40,29 @@ header {
   background: var(--color-header-bg);
   padding: 3rem 0;
   text-align: center;
-  border-bottom: 1px solid var(--color-header-border);
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding: 3rem;
+  gap: 2rem;
+  justify-content: center;
+}
+
+header .sideLeft {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+header .sideRight {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
 }
 
 h1 {
   color: var(--color-primary);
   font-size: 2.6rem;
-  margin-bottom: 0.5rem;
   letter-spacing: 2px;
   position: relative;
 }
@@ -55,37 +70,89 @@ h1 {
 .profession {
   color: var(--color-secondary);
   font-size: 1.3rem;
-  margin-bottom: 1.5rem;
   font-style: italic;
 }
 
-nav ul {
+header ul {
   list-style: none;
   display: flex;
+  flex-direction: column;
   justify-content: center;
-  gap: 2rem;
+  align-items: flex-start;
+  gap: 1rem;
 }
 
-nav a {
+
+/* Estilos de la Navbar */
+#navbar {
+  position: sticky;
+  top: 0;
+  overflow: hidden;
+  background-color: var(--color-header-bg);
+  border-bottom: 1px solid var(--color-header-border);
+  z-index: 1000;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: center;
+}
+
+#navbar .content {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 1000px
+}
+
+@media only screen and (max-width: 1030px) {
+  .contact-text {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .contact-label {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  #navbar span {
+    display: none;
+  }
+}
+
+.contact {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.theme-change {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+#navbar a {
   color: var(--color-primary);
   text-decoration: none;
   font-size: 1rem;
-  text-transform: uppercase;
-  letter-spacing: 1px;
   transition: color 0.3s ease;
 }
 
-nav a:hover {
+#navbar a:hover {
   color: var(--color-secondary);
 }
 
 
 /* Sección General */
 section {
-  padding: 4rem 0;
-}
-
-.container {
+  padding: 3rem 0;
   width: 90%;
   max-width: 1200px;
   margin: 0 auto;
@@ -272,29 +339,6 @@ h2::after {
 #skills .container .card ul li:hover {
   background-color: var(--color-primary);
   color: var(--color-main-bg);
-}
-
-
-/* Sección Contacto */
-#contact {
-  text-align: center;
-}
-
-.contact-button {
-  background-color: var(--color-primary);
-  color: var(--color-main-bg);
-  padding: 1rem 2.5rem;
-  border-radius: 50px;
-  text-decoration: none;
-  font-size: 1rem;
-  letter-spacing: 1px;
-  margin-top: 2rem;
-  display: inline-block;
-  transition: background-color 0.3s ease;
-}
-
-.contact-button:hover {
-  background-color: var(--color-secondary);
 }
 
 
