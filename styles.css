@@ -151,13 +151,6 @@ header ul {
 
 
 /* Sección General */
-section {
-  padding: 3rem 0;
-  width: 90%;
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
 h2 {
   font-size: 2rem;
   margin-bottom: 2rem;
@@ -174,6 +167,25 @@ h2::after {
   background-color: var(--color-primary);
   margin: 1rem auto 0;
   border-radius: 5px;
+}
+
+.twosides {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding: 3rem 0;
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  gap: 3rem;
+}
+
+.twosides .side {
+  flex: 1;
+  min-width: 440px;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
 }
 
 
@@ -348,7 +360,6 @@ footer {
   color: var(--color-header-text);
   text-align: center;
   padding: 2rem 0;
-  margin-top: 4rem;
   border-top: 1px solid var(--color-header-border);
 }
 
