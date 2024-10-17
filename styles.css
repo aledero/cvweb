@@ -123,19 +123,19 @@ header #avatar {
   max-width: 1600px;
 }
 
-@media only screen and (max-width: 1015px) {
+@media only screen and (max-width: 1175px) {
   .contact-text {
     display: none;
   }
 }
 
-@media only screen and (max-width: 500px) {
+@media only screen and (max-width: 580px) {
   .contact-label {
     display: none;
   }
 }
 
-@media only screen and (max-width: 400px) {
+@media only screen and (max-width: 410px) {
   #navbar span {
     display: none;
   }
