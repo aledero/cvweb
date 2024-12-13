@@ -399,8 +399,18 @@ h2::after {
   transition: background-color 0.3s ease;
 }
 
+#skills .container .card ul li a {
+  color: var(--color-primary);
+  cursor: text;
+  text-decoration: none;
+}
+
 #skills .container .card ul li:hover {
   background-color: var(--color-primary);
+  color: var(--color-main-bg);
+}
+
+#skills .container .card ul li:hover a {
   color: var(--color-main-bg);
 }
 

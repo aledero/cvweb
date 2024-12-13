@@ -1,0 +1,60 @@
+.hideContent {
+    display: none !important;
+}
+
+td {
+    width: 6rem;
+    height: 6rem;
+    padding: 0.25rem;
+    border: 4px solid black;
+    border-collapse: collapse;
+
+}
+
+.cellDiv {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: xx-large;
+}
+
+.winner {
+    color: red;
+}
+
+#game td:first-child {
+    border-left: none;
+}
+
+#game tr:first-child td {
+    border-top: none;
+}
+
+#game td:last-child {
+    border-right: none;
+}
+
+#game tr:last-child td {
+    border-bottom: none;
+}
+
+#tableDiv {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+    gap: 1rem;
+}
+
+#noRows, #navigation {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    font-size: x-large;
+    width: 100%;
+    gap: 0.5rem;
+}
+
+#gridSize {
+    width: 2rem;
+}

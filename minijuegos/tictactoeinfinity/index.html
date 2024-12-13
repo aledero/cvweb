@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TIC TAC TOE INFINITY</title>
+    <link rel="stylesheet" href="index.css">
+    <script src="index.js"></script>
+</head>
+<body onload="createGrid()">
+    <main>
+        <div id="tableDiv">
+            <div id="navigation">
+                <div><span id="turnOrWinner">Turno</span>: <span id="turn">X</span></div>
+                <button id="restartBtn" onclick="onResetClick()">Reiniciar</button>
+            </div>
+            <table id="game"></table>
+            <p>
+                Éste 3 en rayas no permite llegar a empate. En el momento en que se 
+                pone la última pieza, se limpia y se empieza desde ahí. La única forma
+                de terminar la partida es ganando. ¡Suerte!
+            </p>
+        </div>
+    </main>
+</body>
+</html>
