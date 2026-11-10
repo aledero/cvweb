@@ -72,6 +72,11 @@
         var head = el("div", "job-head");
         head.append(el("h3", null, job.company), el("time", null, job.period));
         li.append(head, el("div", "position", job.position), el("p", null, job.description));
+        if (Array.isArray(job.stack) && job.stack.length) {
+          var stack = el("ul", "stack");
+          job.stack.forEach(function (tech) { stack.append(el("li", null, tech)); });
+          li.append(stack);
+        }
         return li;
       });
     },
@@ -84,7 +89,8 @@
         return wrap;
       });
     },
-    education: function (items) {
+    // Generic "title + detail" lists
+    info: function (items) {
       return items.map(function (item) {
         var li = el("li", null, item.title);
         li.append(el("span", null, item.detail));
@@ -92,6 +98,7 @@
       });
     }
   };
+  renderers.education = renderers.languages = renderers.volunteering = renderers.info;
 
   function apply(dict, lang) {
     root.lang = lang;

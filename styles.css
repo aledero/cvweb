@@ -358,17 +358,34 @@ h1 {
   color: var(--accent);
 }
 
-.education li + li {
+.info-list li + li {
   margin-top: 0.6rem;
 }
 
-.education li {
+.info-list li {
   font-size: 0.9rem;
 }
 
-.education span {
+.info-list span {
   display: block;
   font-size: 0.8rem;
+  color: var(--muted);
+}
+
+/* Tech stack under each job */
+.stack {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.3rem;
+  margin-top: 0.5rem;
+}
+
+.stack li {
+  font-size: 0.72rem;
+  font-weight: 500;
+  padding: 0.1rem 0.5rem;
+  border: 1px solid var(--border);
+  border-radius: 6px;
   color: var(--muted);
 }
 
